@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.markandreydelacruz.pupsisgrades.MainActivity"
+    android:background="@android:color/transparent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_background">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    app:srcCompat="@drawable/logo_pup"
+                    android:id="@+id/imageView"
+                    android:layout_height="153dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/colorPrimary" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+
+                <TextView
+                    android:text="Student Access Module"
+                    android:layout_width="match_parent"
+                    android:id="@+id/textView"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="14sp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorPrimary"
+                    android:textStyle="normal|bold"
+                    android:fontFamily="sans-serif-smallcaps" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/editTextStudentNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Student Number"
+                    app:met_singleLineEllipsis="true"
+                    app:met_clearButton="true"
+                    app:met_floatingLabel="normal"
+                    android:text="2014-00084-TG-0"
+                    android:background="@android:color/white"
+                    android:backgroundTint="@android:color/white" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    app:met_singleLineEllipsis="true"
+                    app:met_clearButton="true"
+                    app:met_floatingLabel="normal"
+                    android:text="2014-00084-TG-0!" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/spinnerMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Month"
+                        app:met_floatingLabel="normal"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="11" />
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/spinnerDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Day"
+                        app:met_floatingLabel="normal"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="16" />
+
+                    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                        android:id="@+id/spinnerYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Year"
+                        app:met_floatingLabel="normal"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="1997" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:text="sisstudents.pup.edu.ph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewSisSite"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:elevation="0dp"
+                        android:autoLink="web" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:text="View Grades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonViewGrades"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1"
+        android:background="@android:color/holo_green_light"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:textAllCaps="false"
+        android:textStyle="normal|bold" />
+
+</RelativeLayout>
+
